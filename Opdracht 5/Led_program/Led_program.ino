@@ -2,7 +2,7 @@
 
 #define LED1 12  // pin 12
 #define LED2 13  // pin 13
-#define LED3 15  // pin 14
+#define LED3+ 15  // pin 14
 
 struct s_led {
   byte          gpio;         //LED GPIO NUMMER
@@ -58,6 +58,7 @@ void setup() {
       &led.taskh,
       app_cpu
      );
+     
   printf("%d ",led.gpio);     
   }
   putchar('\n');
