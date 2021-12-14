@@ -64,6 +64,22 @@ void setup() {
   putchar('\n');
 }
 
+
+
 void loop() {
+
+int counter = 0;
+
   delay(1000);
+  counter++;
+
+  if (counter == 10){
+      digitalWrite(12, LOW);
+      digitalWrite(13, LOW);
+      digitalWrite(14, LOW);
+      delay(5000);                  //wacht 5 seconden.
+    
+                   
+    counter = 0;                  // Zet counter op 0.
+  }
 }
