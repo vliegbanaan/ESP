@@ -74,12 +74,11 @@ int counter = 0;
   counter++;
 
   if (counter == 10){
-      digitalWrite(12, LOW);
-      digitalWrite(13, LOW);
-      digitalWrite(14, LOW);
-      delay(5000);                  //wacht 5 seconden.
-    
-                   
+    printf("Suspending de task, counter is 10...\n");
+    vTaskSuspend(leds[1].taskh);  //suspend de task als counter 10 is.
+    delay(5000);                  //wacht 5 seconden.
+    printf("Resuming de task, Counter wordt 0 gemaakt...\n");
+    vTaskResume(leds[1].taskh);   //resume de taak               
     counter = 0;                  // Zet counter op 0.
   }
 }
