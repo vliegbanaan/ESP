@@ -64,11 +64,9 @@ void setup() {
   putchar('\n');
 }
 
-
+int counter = 0;
 
 void loop() {
-
-int counter = 0;
 
   delay(1000);
   counter++;
