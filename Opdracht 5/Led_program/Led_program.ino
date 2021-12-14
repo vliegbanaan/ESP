@@ -74,11 +74,15 @@ int counter = 0;
   counter++;
 
   if (counter == 10){
-    printf("Suspending de task, counter is 10...\n");
-    vTaskSuspend(leds[1].taskh);  //suspend de task als counter 10 is.
+    printf(".... Suspending de task, counter is 10....\n");
+    vTaskSuspend(leds[0].taskh);  //suspend de task als counter 10 is.
+    vTaskSuspend(leds[1].taskh);
+    vTaskSuspend(leds[2].taskh);
     delay(5000);                  //wacht 5 seconden.
-    printf("Resuming de task, Counter wordt 0 gemaakt...\n");
-    vTaskResume(leds[1].taskh);   //resume de taak               
+    printf(".... Resuming de task, Counter wordt 0 gemaakt....\n");
+    vTaskResume(leds[0].taskh);   //resume de taak 
+    vTaskResume(leds[1].taskh);
+    vTaskResume(leds[2].taskh);              
     counter = 0;                  // Zet counter op 0.
   }
 }
