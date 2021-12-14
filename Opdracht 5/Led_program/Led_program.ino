@@ -74,6 +74,10 @@ int counter = 0;
   counter++;
 
   if (counter == 10){
+
+    printf("Als bron heb ik het boek FreeTROS for ESP32 arduino gebruikt....\n");
+    print
+    
     printf(".... Suspending de task, counter is 10....\n");
     vTaskSuspend(leds[0].taskh);  //suspend de task als counter 10 is.
     vTaskSuspend(leds[1].taskh);
